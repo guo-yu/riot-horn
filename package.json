@@ -1,0 +1,23 @@
+{
+  "name": "riot-horn",
+  "version": "0.1.0",
+  "description": "a event hub for riot.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/turingou/riot-horn.git"
+  },
+  "keywords": [
+    "riot",
+    "event"
+  ],
+  "author": "turing <o.u.turing@Gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/riot-horn/issues"
+  },
+  "homepage": "https://github.com/turingou/riot-horn#readme"
+}
