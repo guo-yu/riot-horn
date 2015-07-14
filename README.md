@@ -1,6 +1,6 @@
-## riot-horn ![NPM version](https://img.shields.io/npm/v/riot-horn.svg?style=flat) 
+## Riot-horn ![NPM version](https://img.shields.io/npm/v/riot-horn.svg?style=flat) 
 
-a event hub for riot.js
+Event-broadcasting made easy in riot.js
 
 ### Installation
 ```bash
@@ -8,21 +8,26 @@ $ npm install riot-horn --save
 ```
 
 ### Example
-```js
-riotHorn.mount('lightbox')
+In your `.tag` file:
+```html
+<parent-component>
+  <child-component>
+  </child-component>
+  <script>
+    this.on('sth', (e) => console.log(e))
+  </script>
+</parent-component>
 
-// Access component
-console.log(window.components.lightbox)
-
-// Trigger auto-listened events
-// `lightbox.open` will trigger `lighbox.open({ dismiss: true })`
-riot.trigger('lightbox.open', {
-  dismiss: true
-})
+<child-component>
+  <script>
+    this.mixin('horn')
+    this.horn('sth', 'hi there!')
+  </script>
+</child-component>
 ```
 
 ### API
-check this file: `lib/riot-horn.js`
+Check this file: `lib/riot-horn.js`
 
 ### Contributing
 - Fork this repo
